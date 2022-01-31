@@ -129,24 +129,24 @@ static PHP_FUNCTION(mecab_path_cost);
 
 /* {{{ PHP method prototypes */
 
-static PHP_METHOD(MeCab_Node, __construct);
-static PHP_METHOD(MeCab_Path, __construct);
+PHP_METHOD(MeCab_Node, __construct);
+PHP_METHOD(MeCab_Path, __construct);
 /* Overloading implementations for mecab_node */
-static PHP_METHOD(MeCab_Node, __get);
-static PHP_METHOD(MeCab_Node, __isset);
+PHP_METHOD(MeCab_Node, __get);
+PHP_METHOD(MeCab_Node, __isset);
 /* IteratorAggregate implementations for mecab_node */
-static PHP_METHOD(MeCab_Node, getIterator);
-static PHP_METHOD(MeCab_Node, setTraverse);
+PHP_METHOD(MeCab_Node, getIterator);
+PHP_METHOD(MeCab_Node, setTraverse);
 /* Iterator implementations for mecab_node */
-static PHP_METHOD(MeCab_NodeIterator, __construct);
-static PHP_METHOD(MeCab_NodeIterator, current);
-static PHP_METHOD(MeCab_NodeIterator, key);
-static PHP_METHOD(MeCab_NodeIterator, valid);
-static PHP_METHOD(MeCab_NodeIterator, rewind);
-static PHP_METHOD(MeCab_NodeIterator, next);
+PHP_METHOD(MeCab_NodeIterator, __construct);
+PHP_METHOD(MeCab_NodeIterator, current);
+PHP_METHOD(MeCab_NodeIterator, key);
+PHP_METHOD(MeCab_NodeIterator, valid);
+PHP_METHOD(MeCab_NodeIterator, rewind);
+PHP_METHOD(MeCab_NodeIterator, next);
 /* Overloading implementations for mecab_path */
-static PHP_METHOD(MeCab_Path, __get);
-static PHP_METHOD(MeCab_Path, __isset);
+PHP_METHOD(MeCab_Path, __get);
+PHP_METHOD(MeCab_Path, __isset);
 
 /* }}} */
 
@@ -2780,7 +2780,7 @@ static PHP_FUNCTION(mecab_path_cost)
  * @access	private
  * @igore
  */
-static PHP_METHOD(MeCab_Node, __construct)
+PHP_METHOD(MeCab_Node, __construct)
 {
 	return;
 }
@@ -2799,7 +2799,7 @@ static PHP_METHOD(MeCab_Node, __construct)
  * @access	public
  * @ignore
  */
-static PHP_METHOD(MeCab_Node, __get)
+PHP_METHOD(MeCab_Node, __get)
 {
 	/* declaration of the resources */
 	zval *object = getThis();
@@ -2880,7 +2880,7 @@ static PHP_METHOD(MeCab_Node, __get)
  * @access	public
  * @ignore
  */
-static PHP_METHOD(MeCab_Node, __isset)
+PHP_METHOD(MeCab_Node, __isset)
 {
 	/* declaration of the resources */
 	php_mecab_node *xnode = NULL;
@@ -2942,7 +2942,7 @@ static PHP_METHOD(MeCab_Node, __isset)
  * @access	public
  * @ignore
  */
-static PHP_METHOD(MeCab_Node, getIterator)
+PHP_METHOD(MeCab_Node, getIterator)
 {
 	php_mecab_node_object *intern;
 	php_mecab_node *xnode;
@@ -2979,7 +2979,7 @@ static PHP_METHOD(MeCab_Node, getIterator)
  * @throws	InvalidArgumentException
  * @access	public
  */
-static PHP_METHOD(MeCab_Node, setTraverse)
+PHP_METHOD(MeCab_Node, setTraverse)
 {
 	php_mecab_node_object *intern;
 	long traverse = 0;
@@ -3029,7 +3029,7 @@ static PHP_METHOD(MeCab_Node, setTraverse)
  * @access	private
  * @igore
  */
-static PHP_METHOD(MeCab_NodeIterator, __construct)
+PHP_METHOD(MeCab_NodeIterator, __construct)
 {
 	return;
 }
@@ -3045,7 +3045,7 @@ static PHP_METHOD(MeCab_NodeIterator, __construct)
  * @access	public
  * @igore
  */
-static PHP_METHOD(MeCab_NodeIterator, current)
+PHP_METHOD(MeCab_NodeIterator, current)
 {
 	php_mecab_node_object *intern;
 	php_mecab_node *xnode;
@@ -3084,7 +3084,7 @@ static PHP_METHOD(MeCab_NodeIterator, current)
  * @access	public
  * @igore
  */
-static PHP_METHOD(MeCab_NodeIterator, key)
+PHP_METHOD(MeCab_NodeIterator, key)
 {
 	php_mecab_node_object *intern;
 	php_mecab_node *xnode;
@@ -3116,7 +3116,7 @@ static PHP_METHOD(MeCab_NodeIterator, key)
  * @access	public
  * @igore
  */
-static PHP_METHOD(MeCab_NodeIterator, next)
+PHP_METHOD(MeCab_NodeIterator, next)
 {
 	php_mecab_node_object *intern;
 	php_mecab_node *xnode;
@@ -3160,7 +3160,7 @@ static PHP_METHOD(MeCab_NodeIterator, next)
  * @access	public
  * @igore
  */
-static PHP_METHOD(MeCab_NodeIterator, rewind)
+PHP_METHOD(MeCab_NodeIterator, rewind)
 {
 	php_mecab_node_object *intern;
 	php_mecab_node *xnode;
@@ -3185,7 +3185,7 @@ static PHP_METHOD(MeCab_NodeIterator, rewind)
  * @access	public
  * @igore
  */
-static PHP_METHOD(MeCab_NodeIterator, valid)
+PHP_METHOD(MeCab_NodeIterator, valid)
 {
 	php_mecab_node_object *intern;
 	php_mecab_node *xnode;
@@ -3215,7 +3215,7 @@ static PHP_METHOD(MeCab_NodeIterator, valid)
  * @access	private
  * @igore
  */
-static PHP_METHOD(MeCab_Path, __construct)
+PHP_METHOD(MeCab_Path, __construct)
 {
 	return;
 }
@@ -3234,7 +3234,7 @@ static PHP_METHOD(MeCab_Path, __construct)
  * @access	public
  * @ignore
  */
-static PHP_METHOD(MeCab_Path, __get)
+PHP_METHOD(MeCab_Path, __get)
 {
 	/* declaration of the resources */
 	zval *object = getThis();
@@ -3293,7 +3293,7 @@ static PHP_METHOD(MeCab_Path, __get)
  * @access	public
  * @ignore
  */
-static PHP_METHOD(MeCab_Path, __isset)
+PHP_METHOD(MeCab_Path, __isset)
 {
 	/* declaration of the resources */
 	php_mecab_path *xpath = NULL;
