@@ -154,7 +154,7 @@ PHP_METHOD(MeCab_Path, __isset);
 
 /* allocate for mecab */
 static php_mecab *
-php_mecab_ctor(TSRMLS_D);
+php_mecab_ctor();
 
 /* free the mecab */
 static void
@@ -166,7 +166,7 @@ php_mecab_set_string(php_mecab *mecab, zend_string *str);
 
 /* allocate for mecab_node */
 static php_mecab_node *
-php_mecab_node_ctor(TSRMLS_D);
+php_mecab_node_ctor();
 
 /* free the mecab_node */
 static void
@@ -178,7 +178,7 @@ php_mecab_node_set_tagger(php_mecab_node *node, php_mecab *mecab);
 
 /* allocate for mecab_path */
 static php_mecab_path *
-php_mecab_path_ctor(TSRMLS_D);
+php_mecab_path_ctor();
 
 /* free the mecab_path */
 static void
@@ -642,7 +642,7 @@ static PHP_GINIT_FUNCTION(mecab)
  * allocate for mecab
  */
 static php_mecab *
-php_mecab_ctor(TSRMLS_D)
+php_mecab_ctor()
 {
 	php_mecab *mecab = NULL;
 
@@ -702,7 +702,7 @@ php_mecab_object_new(zend_class_entry *ce)
 	php_mecab_object *intern;
 
 	intern = (php_mecab_object *)ecalloc(1, sizeof(php_mecab_object));
-	intern->ptr = php_mecab_ctor(TSRMLS_C);
+	intern->ptr = php_mecab_ctor();
 
 	zend_object_std_init(&intern->std, ce);
 	object_properties_init(&intern->std, ce);
@@ -733,7 +733,7 @@ php_mecab_free_object_storage(zend_object *object)
  * allocate for mecab_node
  */
 static php_mecab_node *
-php_mecab_node_ctor(TSRMLS_D)
+php_mecab_node_ctor()
 {
 	php_mecab_node *node = NULL;
 
@@ -789,7 +789,7 @@ php_mecab_node_object_new(zend_class_entry *ce)
 	php_mecab_node_object *intern;
 
 	intern = (php_mecab_node_object *)ecalloc(1, sizeof(php_mecab_node_object));
-	intern->ptr = php_mecab_node_ctor(TSRMLS_C);
+	intern->ptr = php_mecab_node_ctor();
 	intern->mode = TRAVERSE_NEXT;
 
 	zend_object_std_init(&intern->std, ce);
@@ -818,7 +818,7 @@ php_mecab_node_free_object_storage(zend_object *object)
  * allocate for mecab_path
  */
 static php_mecab_path *
-php_mecab_path_ctor(TSRMLS_D)
+php_mecab_path_ctor()
 {
 	php_mecab_path *path = NULL;
 
@@ -874,7 +874,7 @@ php_mecab_path_object_new(zend_class_entry *ce)
 	php_mecab_path_object *intern;
 
 	intern = (php_mecab_path_object *)ecalloc(1, sizeof(php_mecab_path_object));
-	intern->ptr = php_mecab_path_ctor(TSRMLS_C);
+	intern->ptr = php_mecab_path_ctor();
 
 	zend_object_std_init(&intern->std, ce);
 	object_properties_init(&intern->std, ce);
