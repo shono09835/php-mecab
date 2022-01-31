@@ -1652,7 +1652,7 @@ PHP_FUNCTION(mecab_get_theta)
 	/* parse the arguments */
 	PHP_MECAB_FROM_PARAMETER();
 
-	RETURN_DOUBLE((double)mecab_get_theta(mecab))
+	RETURN_DOUBLE((double)mecab_get_theta(mecab));
 }
 /* }}} */
 
@@ -1702,7 +1702,7 @@ PHP_FUNCTION(mecab_get_lattice_level)
 	/* parse the arguments */
 	PHP_MECAB_FROM_PARAMETER();
 
-	RETURN_LONG((long)mecab_get_lattice_level(mecab))
+	RETURN_LONG((long)mecab_get_lattice_level(mecab));
 }
 /* }}} */
 
@@ -1752,7 +1752,7 @@ PHP_FUNCTION(mecab_get_all_morphs)
 	/* parse the arguments */
 	PHP_MECAB_FROM_PARAMETER();
 
-	RETURN_BOOL(mecab_get_all_morphs(mecab))
+	RETURN_BOOL(mecab_get_all_morphs(mecab));
 }
 /* }}} */
 
