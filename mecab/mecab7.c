@@ -1602,7 +1602,7 @@ PHP_FUNCTION(mecab_get_partial)
 	/* parse the arguments */
 	PHP_MECAB_FROM_PARAMETER();
 
-	RETURN_BOOL(mecab_get_partial(mecab))
+	RETURN_BOOL(mecab_get_partial(mecab));
 }
 /* }}} */
 
